@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Insurance Agency | Plans, Coverage & FAQs</title>
+  <style>
+    /* Print-friendly brochure styling */
+    :root{
+      --ink:#0f172a;
+      --muted:#475569;
+      --line:#e2e8f0;
+      --brand:#0ea5e9;
+      --brand2:#22c55e;
+      --bg:#ffffff;
+      --card:#f8fafc;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font: 12.5px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+    .page{
+      padding:28px 34px;
+      page-break-after: always;
+    }
+    .page:last-child{page-break-after: auto;}
+    h1,h2,h3{margin:0 0 10px 0; line-height:1.2}
+    h1{font-size:26px}
+    h2{font-size:16px; margin-top:18px}
+    h3{font-size:13px; margin-top:14px}
+    p{margin:0 0 10px 0; color:var(--ink)}
+    .muted{color:var(--muted)}
+    .header{
+      display:flex; align-items:flex-start; justify-content:space-between;
+      gap:18px; padding-bottom:14px; border-bottom:2px solid var(--line);
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:6px;
+    }
+    .badge{
+      display:inline-block;
+      font-weight:700;
+      color:#fff;
+      background: linear-gradient(90deg, var(--brand), #2563eb);
+      padding:6px 10px;
+      border-radius:10px;
+      letter-spacing:.2px;
+      width:max-content;
+    }
+    .contact{
+      text-align:right;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      margin-top:16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+    }
+    .kpi{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      margin-top:12px;
+    }
+    .kpi .tile{
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:10px;
+      background:#fff;
+    }
+    .tile b{display:block; font-size:13px}
+    .tile span{color:var(--muted); font-size:12px}
+    ul{margin:6px 0 10px 18px; color:var(--ink)}
+    li{margin:3px 0}
+    table{
+      width:100%;
+      border-collapse: collapse;
+      margin-top:8px;
+      font-size:12px;
+    }
+    th, td{
+      border:1px solid var(--line);
+      padding:8px;
+      vertical-align:top;
+    }
+    th{
+      background:#eef2ff;
+      text-align:left;
+      font-weight:700;
+    }
+    .plan-title{
+      display:flex; align-items:baseline; justify-content:space-between; gap:10px;
+    }
+    .pill{
+      font-weight:700;
+      background:#ecfeff;
+      border:1px solid #a5f3fc;
+      color:#0e7490;
+      padding:3px 8px;
+      border-radius:999px;
+      font-size:11px;
+      white-space:nowrap;
+    }
+    .note{
+      border-left:4px solid var(--brand2);
+      background:#f0fdf4;
+      padding:10px 12px;
+      border-radius:10px;
+      margin-top:10px;
+      color:#14532d;
+    }
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:10px;
+    }
+    .faq{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:12px;
+      background:#fff;
+      margin-top:10px;
+    }
+    .faq b{display:block; margin-bottom:6px}
+    .footer{
+      margin-top:14px;
+      padding-top:10px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:11px;
+    }
+    .small{font-size:11px}
+    @media print{
+      body{background:#fff}
+      .page{padding:22mm 18mm;}
+      a{color:inherit; text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page">
+  <div class="header">
+    <div class="brand">
+      <div class="badge">CAR INSURANCE AGENCY</div>
+      <h1>Your Vehicle. Your Coverage. Your Peace of Mind.</h1>
+      <p class="muted">Car insurance plans for private cars and family vehicles — with clear options and simple claim support.</p>
+    </div>
+    <div class="contact">
+      <div><b>Agency Name:</b> __________________________</div>
+      <div><b>Phone:</b> _______________________________</div>
+      <div><b>Email:</b> ________________________________</div>
+      <div><b>Website:</b> ______________________________</div>
+      <div><b>Office:</b> ________________________________</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>What We Cover</h2>
+      <ul>
+        <li><b>Third-Party Liability</b> (injury/death & property damage to others)</li>
+        <li><b>Own Damage</b> (damage to your car due to accident, fire, theft, flood, etc.)</li>
+        <li><b>Personal Accident</b> (coverage for driver/owner as selected)</li>
+        <li><b>Optional Add-ons</b> (zero depreciation, roadside assistance, engine protect, etc.)</li>
+      </ul>
+
+      <h2>Who This Is For</h2>
+      <ul>
+        <li>New car owners looking for comprehensive protection</li>
+        <li>Daily commuters seeking affordable third-party or bundled plans</li>
+        <li>Families wanting driver & passenger safety options</li>
+        <li>People renewing policies who want better claim experience</li>
+      </ul>
+
+      <div class="kpi">
+        <div class="tile">
+          <b>Fast Quotes</b>
+          <span>Share car details & get plan options</span>
+        </div>
+        <div class="tile">
+          <b>Clear Plans</b>
+          <span>Simple inclusions & exclusions</span>
+        </div>
+        <div class="tile">
+          <b>Claim Help</b>
+          <span>Step-by-step assistance</span>
+        </div>
+      </div>
+
+      <div class="note">
+        <b>Tip:</b> Choose coverage based on your car’s value, city traffic, parking risk, and how often you drive.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Quick Checklist (Get a Quote)</h2>
+      <ul>
+        <li>Car make/model/variant & year</li>
+        <li>Registration number</li>
+        <li>Previous policy (if renewal)</li>
+        <li>No-Claim Bonus (NCB) status (if applicable)</li>
+        <li>Any accessories / modifications</li>
+      </ul>
+
+      <h2>Claim Support Snapshot</h2>
+      <ol class="muted">
+        <li>Intimate claim & share incident details</li>
+        <li>Vehicle inspection / survey (if required)</li>
+        <li>Repair estimate & approval</li>
+        <li>Repair & final documentation</li>
+        <li>Settlement (cashless or reimbursement)</li>
+      </ol>
+
+      <div class="footer">
+        <div><b>Document Version:</b> 1.0</div>
+        <div><b>Date:</b> 2026-01-31</div>
+        <div class="small">This brochure is informational; final coverage is subject to policy wording and insurer terms.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <h1>Plans & Coverage Options</h1>
+  <p class="muted">Pick a plan that matches your risk and budget. Exact limits depend on insurer/product and your selections.</p>
+
+  <h2>Plan Comparison (At a Glance)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Coverage</th>
+        <th>Third-Party (TP) Plan</th>
+        <th>Standard Comprehensive</th>
+        <th>Premium Comprehensive+</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Third-party liability</b></td>
+        <td>Included</td>
+        <td>Included</td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td><b>Own damage (your car)</b></td>
+        <td>Not included</td>
+        <td>Included</td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td><b>Theft / fire / natural events</b></td>
+        <td>Not included</td>
+        <td>Included</td>
+        <td>Included + expanded add-ons</td>
+      </tr>
+      <tr>
+        <td><b>Cashless network repairs</b></td>
+        <td>Usually no (TP only)</td>
+        <td>Available (network dependent)</td>
+        <td>Priority support (product dependent)</td>
+      </tr>
+      <tr>
+        <td><b>Personal accident cover</b></td>
+        <td>Optional / add-on</td>
+        <td>Optional / add-on</td>
+        <td>Commonly bundled options</td>
+      </tr>
+      <tr>
+        <td><b>Recommended for</b></td>
+        <td>Budget + legal compliance</td>
+        <td>Balanced protection</td>
+        <td>Maximum peace of mind</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="plan-title">
+        <h2>Plan A: Third-Party (TP)</h2>
+        <span class="pill">Most affordable</span>
+      </div>
+      <p class="muted">Covers financial liability if you cause damage/injury to others. Does not pay for your car’s repairs.</p>
+      <h3>Includes</h3>
+      <ul>
+        <li>Third-party bodily injury/death liability</li>
+        <li>Third-party property damage (as per policy limits)</li>
+        <li>Legal liability protection (policy-defined)</li>
+      </ul>
+      <h3>Not included (typical)</h3>
+      <ul>
+        <li>Damage to your own car</li>
+        <li>Theft of your own car</li>
+        <li>Consumables (oil, nuts/bolts), depreciation, etc.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="plan-title">
+        <h2>Plan B: Standard Comprehensive</h2>
+        <span class="pill">Best value</span>
+      </div>
+      <p class="muted">Combines third-party liability with own-damage cover for your car.</p>
+      <h3>Includes</h3>
+      <ul>
+        <li>Third-party liability (injury/death & property damage)</li>
+        <li>Accidental damage to your car</li>
+        <li>Fire, theft, vandalism (as per policy wording)</li>
+        <li>Natural calamities (flood, cyclone, etc., product dependent)</li>
+      </ul>
+      <h3>Common options</h3>
+      <ul>
+        <li>Personal Accident cover</li>
+        <li>Roadside assistance</li>
+        <li>Accessories cover (electrical/non-electrical)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px;">
+    <div class="plan-title">
+      <h2>Plan C: Premium Comprehensive+</h2>
+      <span class="pill">Maximum protection</span>
+    </div>
+    <p class="muted">A comprehensive plan enhanced with add-ons to reduce out-of-pocket expenses during claims.</p>
+    <h3>Popular Add-ons (may vary by insurer)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:32%">Add-on</th>
+          <th>What it helps with</th>
+          <th style="width:30%">Good for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Zero Depreciation</b></td>
+          <td>Reduces depreciation deductions on parts during claim (conditions apply).</td>
+          <td>Newer cars, high repair costs</td>
+        </tr>
+        <tr>
+          <td><b>Engine Protect</b></td>
+          <td>Helps cover engine/gearbox damage in certain scenarios (e.g., water ingress) subject to terms.</td>
+          <td>Flood-prone areas</td>
+        </tr>
+        <tr>
+          <td><b>Roadside Assistance</b></td>
+          <td>Towing, jump-start, flat tire help, minor on-site fixes.</td>
+          <td>Highway & frequent drivers</td>
+        </tr>
+        <tr>
+          <td><b>Return to Invoice (RTI)</b></td>
+          <td>In total loss/theft cases, may pay invoice-related value (policy-defined).</td>
+          <td>New cars, financed cars</td>
+        </tr>
+        <tr>
+          <td><b>Consumables Cover</b></td>
+          <td>Helps cover items often excluded (engine oil, coolant, etc.).</td>
+          <td>People who want fewer exclusions</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <b>Important:</b> Add-ons have conditions and exclusions. Always confirm what triggers coverage and what documents are needed.
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="small">Coverage availability, limits, and pricing depend on insurer, vehicle details, location, claim history, and add-ons chosen.</div>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <h1>Common Terms (Glossary)</h1>
+  <p class="muted">Plain-English explanations of common policy terms. Final meaning is as defined in your policy wording.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <h2>Core Coverage Terms</h2>
+      <h3>Third-Party (TP)</h3>
+      <p class="muted">Covers losses you cause to someone else (people or their property). It generally does not cover your own car damage.</p>
+
+      <h3>Comprehensive</h3>
+      <p class="muted">Typically includes TP liability plus your own car’s damage/theft/fire and other perils as defined.</p>
+
+      <h3>Own Damage (OD)</h3>
+      <p class="muted">The portion that pays for repairs to your car due to covered incidents (accident, fire, theft, etc.).</p>
+
+      <h3>Insured Declared Value (IDV)</h3>
+      <p class="muted">Your car’s declared value for insurance (used to calculate premium and claim payout in total loss/theft).</p>
+    </div>
+
+    <div class="card">
+      <h2>Costs & Payments</h2>
+      <h3>Premium</h3>
+      <p class="muted">Amount you pay to buy/renew the policy.</p>
+
+      <h3>Deductible / Excess</h3>
+      <p class="muted">The amount you pay out-of-pocket in a claim before insurance pays the rest (can be compulsory and/or voluntary).</p>
+
+      <h3>Depreciation</h3>
+      <p class="muted">Reduction in value of parts due to age/wear. Some claims deduct depreciation unless you have zero-dep add-on.</p>
+
+      <h3>No Claim Bonus (NCB)</h3>
+      <p class="muted">A discount on renewal premium if no claims were made in the previous policy period (rules apply).</p>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h2>Claims & Processes</h2>
+      <h3>Cashless Claim</h3>
+      <p class="muted">Repairs at a network garage where insurer pays the garage directly (you pay deductibles/non-payables).</p>
+
+      <h3>Reimbursement Claim</h3>
+      <p class="muted">You pay the garage first, then submit documents for insurer reimbursement as per policy.</p>
+
+      <h3>Survey/Inspection</h3>
+      <p class="muted">A verification step by insurer or appointed surveyor to assess damage and claim validity.</p>
+
+      <h3>Total Loss / Constructive Total Loss</h3>
+      <p class="muted">When repair cost crosses a defined threshold, insurer may treat it as total loss (policy rules apply).</p>
+    </div>
+
+    <div class="card">
+      <h2>People Covered</h2>
+      <h3>Driver / Owner-Driver</h3>
+      <p class="muted">Coverage can depend on who is driving and what PA cover is selected for owner-driver or named occupants.</p>
+
+      <h3>Personal Accident (PA) Cover</h3>
+      <p class="muted">Provides compensation for accidental death/permanent disability as per chosen sum insured and policy terms.</p>
+
+      <h3>Named Driver / Open Driver</h3>
+      <p class="muted">Some policies restrict who can drive; others allow any licensed driver (varies by product and jurisdiction).</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="small">If you share your country/region and vehicle type (private car, taxi, commercial), I can align wording to local norms and regulations.</div>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <h1>FAQs (Most Common Questions)</h1>
+  <p class="muted">Use these answers on your brochure/website. You can edit to match your insurer and regional rules.</p>
+
+  <div class="faq">
+    <b>1) What is the difference between Third-Party and Comprehensive insurance?</b>
+    <div class="muted">
+      Third-Party covers the damage/injury you cause to others. Comprehensive typically covers Third-Party liability
+      <i>plus</i> your own car’s damage/theft/fire and other covered events.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>2) Does car insurance cover the driver?</b>
+    <div class="muted">
+      Liability policies cover your legal liability to others. Coverage for the driver (e.g., Personal Accident cover)
+      depends on what you purchase (owner-driver PA, named driver, occupants). Always check who is insured and under what limits.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>3) What is a deductible and why do I pay it?</b>
+    <div class="muted">
+      A deductible (excess) is the portion you pay in a claim. It reduces small claims and helps keep premiums lower.
+      There may be a compulsory deductible and an optional voluntary deductible.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>4) What does “Zero Depreciation” mean?</b>
+    <div class="muted">
+      It is an add-on that can reduce depreciation deductions on replaced parts during claims (conditions apply).
+      It’s often useful for newer cars or expensive body repairs.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>5) What is IDV and how should I choose it?</b>
+    <div class="muted">
+      IDV is the insured value of your car used for premium and total-loss payouts. Too low can reduce payout; too high can increase premium.
+      Choose an IDV that reasonably reflects your car’s market value as allowed by the insurer.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>6) What is covered under comprehensive (typical examples)?</b>
+    <div class="muted">
+      Accidents, theft, fire, vandalism, and certain natural events (e.g., flood/cyclone) depending on policy terms.
+      Exclusions and deductibles still apply.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>7) What is not covered (common exclusions)?</b>
+    <div class="muted">
+      Driving without a valid license, driving under influence, wear and tear, mechanical breakdown not linked to a covered event,
+      illegal use, and damage outside policy terms. Exact exclusions vary by insurer.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>8) What should I do immediately after an accident?</b>
+    <div class="muted">
+      Ensure safety, seek medical help if needed, inform authorities when required, document the scene (photos), exchange details,
+      and notify the insurer/agency as soon as possible.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>9) Can I choose any garage for repairs?</b>
+    <div class="muted">
+      You can usually repair anywhere, but cashless claims often require a network garage. Non-network repairs may be reimbursed
+      based on policy terms and approvals.
+    </div>
+  </div>
+
+  <div class="faq">
+    <b>10) How can I reduce my premium?</b>
+    <div class="muted">
+      Maintain NCB, choose suitable deductibles, avoid unnecessary add-ons, ensure correct IDV, keep your driving record clean,
+      and compare plan options annually.
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="small">
+      Disclaimer: This material is for general information. Actual coverage is subject to the insurer’s policy wording, endorsements, limits, deductibles, and local regulations.
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
