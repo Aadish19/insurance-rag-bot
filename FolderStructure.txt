@@ -1,0 +1,19 @@
+insurance-rag-bot/
+  backend/
+    main.py
+    rag/
+      pdf_to_text.py
+      chunking.py
+      embed_store.py
+      rag_answer.py
+    data/
+      knowledge.pdf
+      index.faiss
+      chunks.json
+  frontend/
+    index.html
+    package.json
+    src/
+      App.jsx
+      ChatWidget.jsx
+      ChatWidget.css
