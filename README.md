@@ -25,3 +25,40 @@ When someone asks “How do I file a claim?”, the backend does not guess. It l
 **Vector DB (FAISS):** This is a super-fast storage box that helps you quickly find the best matching text pieces.
 
 **Chat generation (OpenAI Responses API):** This is the writer that reads the best pieces and talks back like a helpful customer support agent.
+
+
+# Knowledge of some methods used
+
+## 1. Chunking (the most important RAG step)
+Chunking means breaking a big document into smaller pieces so search works well.
+
+If chunks are too big, the system grabs long blocks and the answer becomes messy.
+
+If chunks are too small, the system loses meaning and context.
+
+**The most reliable default for real-world PDFs is ###token chunking with overlap.**
+
+Overlap repeats a small part between chunks, so you do not cut an important sentence in half.
+
+------------------------------
+**Chunking types you should know (simple one-liners)**
+Token chunking: Same size chunks, works for almost every PDF, best default.
+
+Section chunking: Split by headings or blank lines, great for clean docs, breaks on messy docs.
+
+Sentence chunking: Split sentence by sentence, natural flow, but can create too many tiny chunks.
+
+Paragraph chunking: Split by paragraphs, keeps one idea together, and depends on clean formatting.
+
+Fixed character chunking: Cut every X characters, simple and fast, can cut sentences mid-way.
+
+Sliding window chunking: Move a window across text with overlap, great context coverage.
+
+Semantic chunking: Split when the topic changes, understand the context better, and produce the best quality outputs (* this is my favorite type of chunking)
+
+Table-aware chunking: Keeps tables intact so rows do not get scrambled in search.
+
+Hybrid chunking: Mix headings plus token limits so it works even on messy PDFs.
+
+## 2. 
+    

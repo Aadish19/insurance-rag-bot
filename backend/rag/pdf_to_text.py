@@ -1,3 +1,5 @@
+## This code will be modified to perform OCR on images for actual PDFs
+
 from pypdf import PdfReader
 
 def pdf_to_text(pdf_path: str) -> str:
@@ -10,3 +12,9 @@ def pdf_to_text(pdf_path: str) -> str:
     text = text.replace("\r", "\n")
     text = "\n".join([line.strip() for line in text.split("\n") if line.strip()])
     return text
+
+#Test
+"""
+txt = pdf_to_text("./backend/data/knowledge.pdf")
+print(txt)
+"""
