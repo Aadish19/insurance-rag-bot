@@ -3,3 +3,4 @@ reportlab
 torch
 transformers
 tiktoken
+faiss-cpu
