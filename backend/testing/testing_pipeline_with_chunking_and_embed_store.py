@@ -2,7 +2,7 @@ from rag.pdf_to_text  import pdf_to_text
 from rag.chunking import chunk_text_LLM
 from rag.embed_store import build_and_save_index
 
-## Running Script -> from openai import OpenAI
+## Running Script -> python -m testing.testing_pipeline_with_chunking_and_embed_store
 
 PDF_TXT = pdf_to_text("data/knowledge.pdf")
 INDEX_PATH = "vector.index"
