@@ -60,5 +60,18 @@ Table-aware chunking: Keeps tables intact so rows do not get scrambled in search
 
 Hybrid chunking: Mix headings plus token limits so it works even on messy PDFs.
 
-## 2. 
+## 2. Embeddings (turn chunks into searchable numbers)
+Embeddings are what make “meaning search” possible. Instead of searching for exact keywords, embeddings let you search by similarity.
+
+Here is the flow:
+
+Convert each chunk into an embedding vector (a list of numbers).
+
+Store those vectors in FAISS (vector DB).
+
+Later, convert the user question into a vector too.
+
+Ask FAISS: which chunk vectors are closest to this question vector?
+
+## 3.
     
